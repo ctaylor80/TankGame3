@@ -5,11 +5,18 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import java.util.ArrayList;
 
 public class MyGdxGame extends ApplicationAdapter {
 	SpriteBatch batch;
 	Texture img;
 	
+        ArrayList<GameListener> listeners;
+        
+        public void addListener(GameListener listener) {
+            listeners.add(listener);
+        }
+        
 	@Override
 	public void create () {
             //test
